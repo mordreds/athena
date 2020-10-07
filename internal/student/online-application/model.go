@@ -1,13 +1,15 @@
-package online_registration
+package online_application
+
+import "time"
 
 // Required Model Schema
-type OnlineRegistration struct {
+type OnlineApplication struct {
 	// Standard Required Fields
 	ID int64 `json:"id"`
 	Status int8 `json:"status"`
-	RecordImported bool `json:"record_imported"`
-	CreatedAt int64 `json:"created_at"`
-	UpdatedAt int64 `json:"updated_at"`
+	Imported bool `json:"imported"`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
 
 	// Person Details
 	FirstName string `json:"first_name"`
